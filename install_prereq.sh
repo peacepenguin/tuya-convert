@@ -3,8 +3,8 @@ set -euo pipefail
 
 debianInstall() {
 	sudo apt-get update
-	sudo apt-get install -y git iw dnsmasq rfkill hostapd screen curl build-essential python3-pip python3-setuptools python3-wheel python3-dev mosquitto haveged net-tools libssl-dev iproute2 iputils-ping
-	sudo python3 -m pip install --user --upgrade paho-mqtt tornado git+https://github.com/drbild/sslpsk.git pycryptodomex
+	sudo apt-get install -y git iw dnsmasq rfkill hostapd screen curl build-essential python3-pip python3-setuptools python3-wheel python3-dev mosquitto haveged net-tools libssl-dev iproute2 iputils-ping python3-paho-mqtt python3-tornado
+	sudo python3 -m pip install --break-system-packages --upgrade git+https://github.com/peacepenguin/sslpsk.git pycryptodomex
 }
 
 archInstall() {
